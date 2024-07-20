@@ -6,7 +6,8 @@ import { ContactsService } from '../contacts.service';
 
 @Component({
   selector: 'app-contact-list',
-  templateUrl: './contact-list.component.html'
+  templateUrl: './contact-list.component.html',
+  styleUrls: ['./contact-list.component.css'] 
 })
 export class ContactListComponent {
   contacts: Contact[] = [];

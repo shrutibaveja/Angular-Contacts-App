@@ -1,18 +1,29 @@
-<input type="text" placeholder="Search contacts..." (input)="filterContacts($any($event).target.value)">
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Phone</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let contact of filteredContacts">
-      <td>{{ contact.name }}</td>
-      <td>{{ contact.phone }}</td>
-      <td>{{ contact.email }}</td>
-    </tr>
-  </tbody>
-</table>
+  <form>
+    <div class="form-row">
+      <div class="input-data">
+        <input type="text" class="form-input" (input)="filterContacts($any($event).target.value)">
+        <div class="underline"></div>
+        <label for="email" class="form-label">Search Contact</label>
+      </div>
+    </div>
+  </form>
+ 
+  <table class="table-box">
+    <thead>
+      <tr>
+        <th class="heading">Name</th>
+        <th class="heading">Phone</th>
+        <th class="heading">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of filteredContacts">
+        <td class="list">{{ contact.name }}</td>
+        <td class="list">{{ contact.phone }}</td>
+        <td class="list">{{ contact.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
