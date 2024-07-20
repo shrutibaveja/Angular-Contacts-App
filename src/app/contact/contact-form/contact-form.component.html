@@ -1,0 +1,14 @@
+<div class="contact-form-container">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label for="name" class="form-label">Name:</label>
+    <input type="text" id="name" formControlName="name" class="form-input" required>
+
+    <label for="phone" class="form-label">Phone:</label>
+    <input type="text" id="phone" formControlName="phone" class="form-input" required>
+
+    <label for="email" class="form-label">Email:</label>
+    <input type="email" id="email" formControlName="email" class="form-input" required>
+
+    <button type="submit" class="form-button" [disabled]="!contactForm.valid">Add Contact</button>
+  </form>
+</div>

@@ -1,0 +1,18 @@
+<input type="text" placeholder="Search contacts..." (input)="filterContacts($any($event).target.value)">
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of filteredContacts">
+      <td>{{ contact.name }}</td>
+      <td>{{ contact.phone }}</td>
+      <td>{{ contact.email }}</td>
+    </tr>
+  </tbody>
+</table>
