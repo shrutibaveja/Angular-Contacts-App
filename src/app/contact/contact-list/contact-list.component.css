@@ -4,6 +4,7 @@
 
 .heading{
     text-align: left;
+    min-width: 200px;
 }
 
 .list{
