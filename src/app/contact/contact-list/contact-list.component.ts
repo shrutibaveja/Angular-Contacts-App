@@ -1,5 +1,3 @@
-// contact-list.component.ts
-
 import { Component } from '@angular/core';
 import { Contact } from '../contact.model';
 import { ContactsService } from '../contacts.service';
@@ -15,7 +13,7 @@ export class ContactListComponent {
 
   constructor(private contactsService: ContactsService) {
     this.contacts = this.contactsService.getAllContacts();
-    this.filteredContacts = [...this.contacts]; // Initialize filtered contacts with all contacts
+    this.filteredContacts = [...this.contacts]; 
   }
 
   filterContacts(searchTerm: string): void {

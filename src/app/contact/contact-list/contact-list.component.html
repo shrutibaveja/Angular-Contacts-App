@@ -9,8 +9,8 @@
       </div>
     </div>
   </form>
- 
-  <table class="table-box">
+
+  <table class="table-box" *ngIf="filteredContacts.length">
     <thead>
       <tr>
         <th class="heading">Name</th>
@@ -26,4 +26,7 @@
       </tr>
     </tbody>
   </table>
+  <div class="table-box" *ngIf="!filteredContacts.length">
+    No Data Found
+  </div>
 </div>
